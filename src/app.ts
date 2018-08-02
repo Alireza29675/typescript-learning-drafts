@@ -1,4 +1,14 @@
-var myName: string = "Alireza"
-var myLastName: string = "Sheikholmolouki"
+var myName: string = "Alireza";
+var myLastName: string = "Sheikholmolouki";
 
-console.log(`${ myName } ${ myLastName }`);
+interface Human {
+    name: string,
+    lastname: string
+}
+
+const alireza: Human = {
+    name: myName,
+    lastname: myLastName
+}
+
+console.log(`${ alireza.name } ${ alireza.lastname }`);

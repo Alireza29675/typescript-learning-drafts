@@ -1,3 +1,7 @@
 var myName = "Alireza";
 var myLastName = "Sheikholmolouki";
-console.log(myName + " " + myLastName);
+var alireza = {
+    name: myName,
+    lastname: myLastName
+};
+console.log(alireza.name + " " + alireza.lastname);
