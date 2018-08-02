@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc src/*.ts --target es5",
-    "compile:watch": "tsc src/*.ts --target es5 --watch",
+    "compile": "tsc",
+    "compile:watch": "tsc --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
