@@ -33,3 +33,26 @@ var AnalogClock = /** @class */ (function () {
 }());
 var digital = createClock(DigitalClock, 12, 17);
 var analog = createClock(AnalogClock, 7, 32);
+var square = {};
+square.color = "blue";
+square.sideLength = 10;
+square.penWidth = 5.0;
+var jQueryClass = /** @class */ (function () {
+    function jQueryClass(query) {
+        this.query = query;
+    }
+    jQueryClass.prototype.print = function () {
+        console.log('This is ' + this.query);
+    };
+    return jQueryClass;
+}());
+var $ = function (query) {
+    return new jQueryClass(query);
+};
+$.ajax = function (request) {
+    console.log("sending request to " + request.link);
+};
+$('Hello').print();
+$.ajax({
+    link: "/"
+});

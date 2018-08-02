@@ -57,3 +57,53 @@ class AnalogClock implements ClockInterface {
 
 let digital = createClock(DigitalClock, 12, 17);
 let analog = createClock(AnalogClock, 7, 32);
+
+
+// -> Extending Interfaces
+interface Shape {
+    color: string;
+}
+
+interface PenStroke {
+    penWidth: number;
+}
+
+interface Square extends Shape, PenStroke {
+    sideLength: number;
+}
+
+let square = <Square>{};
+square.color = "blue";
+square.sideLength = 10;
+square.penWidth = 5.0;
+
+
+// -> Hybrid Types
+interface Request {
+    link: string;
+}
+interface jQuery {
+    (query: string): any;
+    ajax(request: Request): any;
+    delay: number;
+}
+class jQueryClass {
+    private query: string;
+    constructor (query) {
+        this.query = query;
+    }
+    print () {
+        console.log('This is ' + this.query);
+    }
+}
+const $ = <jQuery>function (query: string) {
+    return new jQueryClass(query)
+} 
+$.ajax = function (request: Request) {
+    console.log(`sending request to ${request.link}`)
+}
+
+$('Hello').print();
+$.ajax({
+    link: "/"
+} as Request)
