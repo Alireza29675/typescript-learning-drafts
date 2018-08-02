@@ -1,0 +1,21 @@
+{
+  "name": "typescript-learning-drafts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc src/*.ts --target es5",
+    "compile:watch": "tsc src/*.ts --target es5 --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alireza29675/typescript-learning-drafts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alireza29675/typescript-learning-drafts/issues"
+  },
+  "homepage": "https://github.com/Alireza29675/typescript-learning-drafts#readme"
+}
