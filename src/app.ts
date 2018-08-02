@@ -1,14 +1,14 @@
-var myName: string = "Alireza";
-var myLastName: string = "Sheikholmolouki";
-
 interface Human {
     name: string,
     lastname: string
 }
 
-const alireza: Human = {
-    name: myName,
-    lastname: myLastName
-}
+const people: Human[] = [
+    { name: 'Alireza', lastname: 'Sheikholmolouki' },
+    { name: 'Goudarz', lastname: 'Firoozi' },
+    { name: 'Pedram', lastname: 'Safaeifar' }
+];
 
-console.log(`${ alireza.name } ${ alireza.lastname }`);
+for (let human of people) {
+    console.log(human)
+}
